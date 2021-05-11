@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+
+
+
+
+<div class="container" style="background-image: url('https://thumbor.forbes.com/thumbor/fit-in/1200x0/filters%3Aformat%28jpg%29/https%3A%2F%2Fspecials-images.forbesimg.com%2Fimageserve%2F5dbb4182d85e3000078fddae%2F0x0.jpg'); padding: 150px; margin-top: 10px;
+	height: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;">
+
+	<h1 style="color:white">Patient Identification System </h1>
+	<hr>
+	<div class="container">
+		<a class="btn btn-primary" href="{% url 'index' %}" style="font-size: 20px; margin-bottom: 10px;">Home</a>
+		<a class="btn btn-primary" href="{% url 'add_patient' %}" style="font-size: 20px; margin-bottom: 10px;">Add Patient</a>
+		<a class="btn btn-primary"  href="{% url 'add_photos' %}" style="font-size: 20px; margin-bottom: 10px;">Add Photos</a>
+		<a class="btn btn-primary"  href="{% url 'train' %}" style="font-size: 20px; margin-bottom: 10px;">Train Model</a>
+		<a class="btn btn-primary"  href="{% url 'identify' %}" style="font-size: 20px; margin-bottom: 10px;">Identify</a>
+	</div>
+</div>
+
+{% endblock %}

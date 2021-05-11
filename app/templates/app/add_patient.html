@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+
+{% block content %}
+    <div class="container" style="background-color: lightblue; padding: 50px;">
+    <h3>Enter Patient details</h3>
+    </div>
+      <div class="container" style="background-color: white;padding: 70px">
+    <form method="POST">{% csrf_token %}
+        <div class="container">
+          <br>
+          <div class="container">
+          <div >ID number:&nbsp;</div><div>
+        {{ form.id }} </div>
+        </div>
+        <br>
+        <div class="container">
+          <div >Aadhar Number: </div><div >{{ form.Aadhar_num }} </div>
+        </div>
+        <br>
+        <div class="container">
+          <div >Name: </div><div >{{ form.name }} </div>
+        </div>
+        <br>
+        <div class="container">
+          <div >Contact Number:</div><div >{{ form.contact_number }} </div>
+        </div>
+        <br>
+        <div class="container">
+          <div >Date of Birth:</div><div >{{ form.date_of_birth }} </div>
+        </div>
+        <br>
+        <div class="container">
+          <div >Gender:</div><div > {{ form.gender }} </div>
+        </div>
+        <br>
+        <div class="container">
+          <div >Email:</div><div >{{ form.email }} </div>
+        </div>
+        </div>
+        <br>
+        <button type="submit" class="save btn btn-info" <style align:center>
+
+        </style>Save</button>
+    </form>
+    </div>
+{% endblock %}
